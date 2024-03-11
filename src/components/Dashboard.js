@@ -6,6 +6,8 @@ import LikelihoodRelevanceScatterPlot from './charts/LikelihoodRelevanceScatterP
 import YearIntensityLineChart from './charts/YearIntensityLineChart';
 import StackedBarChart from './charts/StackedBarChart';
 import LikelihoodDistributionPieChart from './charts/LikelihoodDistributionPieChart';
+import TimeSeriesChart from './charts/TimeSeriesChart';
+import LineChart from './charts/LineChart';
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
@@ -61,14 +63,30 @@ const Dashboard = () => {
           </div>
         </Col>
       </Row>
-      {/* <Row>
+      <Row>
         <Col>
           <div>
             <h3>Likelihood Distribution Pie Chart</h3>
             <LikelihoodDistributionPieChart data={filteredData} />
           </div>
         </Col>
-      </Row> */}
+      </Row>
+      <Row>
+        <Col>
+          <div>
+            <h3>TimeSeries Chart</h3>
+            <TimeSeriesChart data={filteredData} />
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <div>
+            <h3>ScatterPlot Chart</h3>
+            <LineChart data={filteredData} />
+          </div>
+        </Col>
+      </Row>
     </Container>
   );
 };
